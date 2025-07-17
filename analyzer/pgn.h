@@ -2620,11 +2620,11 @@ Pgn pgnList[] = {
      126720,
      PACKET_LOOKUPS_UNKNOWN,
      PACKET_FAST,
-     {COMPANY(137),
+     {MATCH_FIELD(PK("Maretron Vendor ID and Industry Code"), BYTES(2), 39049, "0x9889"),
       SIMPLE_DESC_FIELD("Product code", BYTES(2), "0x1b2=SSC200"),
       UINT16_FIELD("Software code"),
       UINT8_DESC_FIELD("Command", "0x50=Deviation calibration result"),
-      UINT8_FIELD("Status"),
+      LOOKUP_FIELD("Status", BYTES(1), MARETRON_CALIBRATION_STATUS),
       END_OF_FIELDS}}
 
     ,

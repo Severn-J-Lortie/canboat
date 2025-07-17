@@ -2898,6 +2898,15 @@ LOOKUP(ZONE_SIZE, 4, "5 nm")
 LOOKUP(ZONE_SIZE, 5, "6 nm")
 LOOKUP_END
 
+LOOKUP_TYPE(MARETRON_CALIBRATION_STATUS, BITS(8))
+LOOKUP(MARETRON_CALIBRATION_STATUS, 1, "Deviation Calibration Started")
+LOOKUP(MARETRON_CALIBRATION_STATUS, 2, "Deviation Calibration Completed Successfully")
+LOOKUP(MARETRON_CALIBRATION_STATUS, 3, "Deviation Calibration Failed to Complete")
+LOOKUP(MARETRON_CALIBRATION_STATUS, 4, "Deviation Calibration Turning Too Fast")
+LOOKUP(MARETRON_CALIBRATION_STATUS, 5, "Deviation Calibration Turning Too Slow")
+LOOKUP(MARETRON_CALIBRATION_STATUS, 6, "Deviation Calibration Invalid Movement")
+LOOKUP_END
+
 // Keep this at the end, so a next include does not need to do this
 #undef LOOKUP_TYPE
 #undef LOOKUP_TYPE_TRIPLET
